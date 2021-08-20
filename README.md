@@ -253,3 +253,6 @@ Route::prefix('shipbob')->group(function () {
     });
 });
 ```
+
+## Author
+- Bryan James Dela Luya
