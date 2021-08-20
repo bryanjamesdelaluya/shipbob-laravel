@@ -18,6 +18,10 @@ SB_APP_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 php artisan vendor:publish --provider="Bryanjamesdelaluya\ShipbobLaravel\ShipbobServiceProvider"
 ```
+4. run this to terminal
+```
+php artisan route:cache
+```
 
 ## Usage
 - Sample code at app\Http\Controllers\API\ShipbobController.php
