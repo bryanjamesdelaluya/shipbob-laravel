@@ -1,15 +1,20 @@
 # shipbob-laravel
 Laravel wrapper package for Shipbob API
+https://developer.shipbob.com/api-docs/
 
 ## Installation
-1. add this to .env
+1. run this to terminal
+```
+composer require bryanjamesdelaluya/shipbob-laravel
+```
+2. add this to .env
 ```
 SB_API_URL=https://api.shipbob.com/1.0/
 SB_PAT_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 SB_CHANNEL_ID=XXXXX
 SB_APP_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
-2. Run this to terminal
+3. run this to terminal
 ```
 php artisan vendor:publish --provider="Bryanjamesdelaluya\ShipbobLaravel\ShipbobServiceProvider"
 ```
