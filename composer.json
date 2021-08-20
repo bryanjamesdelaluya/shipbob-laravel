@@ -1,0 +1,24 @@
+{
+    "name": "bryanjamesdelaluya/shipbob-laravel",
+    "description": "Laravel wrapper package for Shipbob API",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bryanjamesdelaluya\\ShipbobLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bryanjamesdelaluya",
+            "email": "delaluya@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bryanjamesdelaluya\\ShipbobLaravel\\ShipbobServiceProvider"
+            ]
+        }
+    }
+}
