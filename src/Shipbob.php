@@ -575,15 +575,15 @@ class Shipbob
     {
         $headers = [
             'Content-Type' => 'application/json',
-            'Authorization' => 'Bearer ' . env('SB_PAT_TOKEN'),
-            'shipbob_channel_id' => env('SB_CHANNEL_ID'),
+            'Authorization' => 'Bearer ' . config('shipbob.private_access_token'),
+            'shipbob_channel_id' => config('shipbob.channel_id'),
         ];
 
         $client = new GuzzleClient([
             'headers' => $headers
         ]);
 
-        $r = $client->request($method, env('SB_API_URL') . $params, [
+        $r = $client->request($method, config('shipbob.api_url') . $params, [
             $body
         ]);
 

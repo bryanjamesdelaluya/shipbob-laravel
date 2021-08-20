@@ -7,8 +7,8 @@
 **/
 
 return [
-    'SB_API_URL' => env('SB_API_URL'),
-    'SB_APP_ID' => env('SB_APP_ID'),
-    'SB_PAT_TOKEN' => env('SB_PAT_TOKEN'),
-    'SB_CHANNEL_ID' => env('SB_CHANNEL_ID'),
+    'api_url' => env('SB_API_URL'),
+    'app_id' => env('SB_APP_ID'),
+    'private_access_token' => env('SB_PAT_TOKEN'),
+    'channel_id' => env('SB_CHANNEL_ID'),
 ];
