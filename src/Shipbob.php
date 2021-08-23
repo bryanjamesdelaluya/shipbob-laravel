@@ -584,7 +584,7 @@ class Shipbob
         ]);
 
         $r = $client->request($method, config('shipbob.api_url') . $params, [
-            $body
+            'body' => json_encode($body)
         ]);
 
         $response = $r->getBody()->getContents();
