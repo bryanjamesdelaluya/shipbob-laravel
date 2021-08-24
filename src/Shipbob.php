@@ -15,7 +15,7 @@ class Shipbob
     //end points
     CONST ORDER = 'order';
     CONST SHIPMENT = 'shipment';
-    CONST SHIPPING_METHOD = 'shipment';
+    CONST SHIPPING_METHOD = 'shippingmethod';
     const PRODUCT = 'product';
     const INVENTORY = 'inventory';
     const CHANNEL = 'channel';
@@ -244,7 +244,7 @@ class Shipbob
     **/
     public static function getShippingMethods() 
     {
-        return self::requestHttp('GET', self::SHIPMENT . '/shippingmethod');
+        return self::requestHttp('GET', self::SHIPPING_METHOD);
     }
     
     /* PRODUCTS */
