@@ -578,9 +578,19 @@ class Shipbob
             'headers' => $headers
         ]);
 
-        $r = $client->request($method, config('shipbob.api_url') . $params, [
-            'body' => $body
-        ]);
+        if ($method == 'PUT') {
+            $r = $client->request($method, config('shipbob.api_url') . $params, [
+                'body' => $body
+            ]);
+        } else if ($method == 'POST') {
+            $r = $client->request($method, config('shipbob.api_url') . $params, [
+                'body' => json_encode($body)
+            ]);
+        } else {
+            $r = $client->request($method, config('shipbob.api_url') . $params, [
+                $body
+            ]);
+        }
 
         $response = $r->getBody()->getContents();
         return json_decode($response, true);
