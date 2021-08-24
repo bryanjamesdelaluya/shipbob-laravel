@@ -277,7 +277,7 @@ class Shipbob
             "barcode": ' . $data['barcode'] . '
         }';
 
-        return self::requestHttp('POST', self::PRODUCT, $body);
+        return self::requestHttp('POST', self::PRODUCT, $data);
     }
 
     /**
@@ -301,12 +301,7 @@ class Shipbob
     **/
     public static function editSingleProduct($data, $productId) 
     {
-        $body = '{
-            "sku": ' . $data['sku'] . ',
-            "name": ' . $data['name'] . ',
-            "barcode": ' . $data['barcode'] . '
-        }';
-
+        $body = json_encode($data);
         return self::requestHttp('PUT', self::PRODUCT . '/' . $productId, $body);
     }
 
@@ -584,7 +579,7 @@ class Shipbob
         ]);
 
         $r = $client->request($method, config('shipbob.api_url') . $params, [
-            'body' => json_encode($body)
+            'body' => $body
         ]);
 
         $response = $r->getBody()->getContents();
